@@ -32,7 +32,7 @@ dependencies {
     implementation "org.lwjgl:lwjgl-openal:$lwjglVersion"
     implementation "org.lwjgl:lwjgl-opengl:$lwjglVersion"
     implementation "org.lwjgl:lwjgl-stb:$lwjglVersion"
-    implementation files("libs/Beryl-0.5.jar")
+    implementation files("libs/Beryl-0.5.1.jar")
     runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
     runtimeOnly "org.lwjgl:lwjgl-assimp::$lwjglNatives"
     runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
