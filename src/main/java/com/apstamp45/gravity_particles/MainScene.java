@@ -36,7 +36,7 @@ public class MainScene extends Scene {
                 int loopNum = i * squareSize + j;
                 float colorVal = map(loopNum, 0, squareSize * squareSize,
                               0, (float) (2.0 * Math.PI));
-                int type = (int) Math.ceil(Math.random() * 4);
+                int type = (int) Math.ceil(Math.random() * 6);
                 BasicParticle particle = new BasicParticle(loopNum, this,
                             new Vector4f(getColor(colorVal, 0),
                                     getColor(colorVal, (float) (2.0 * Math.PI / 3.0)),
@@ -49,15 +49,23 @@ public class MainScene extends Scene {
                         break;
                     case 2:
                         particle.setMass(2);
-                        particle.setScale(2, 2);
+                        particle.setScale(1.5f, 1.5f);
                         break;
                     case 3:
+                        particle.setMass(3);
+                        particle.setScale(2, 2);
+                        break;
+                    case 4:
+                        particle.setMass(4);
+                        particle.setScale(2.5f, 2.5f);
+                        break;
+                    case 5:
                         particle.setMass(5);
                         particle.setScale(3, 3);
                         break;
-                    case 4:
-                        particle.setMass(10);
-                        particle.setScale(4, 4);
+                    case 6:
+                        particle.setMass(6);
+                        particle.setScale(3.5f, 3.5f);
                         break;
                 }
                 particles.add(particle);
