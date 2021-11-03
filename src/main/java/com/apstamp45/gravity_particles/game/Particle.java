@@ -2,8 +2,8 @@ package com.apstamp45.gravity_particles.game;
 
 import com.apstamp45.beryl.game.GameObject;
 import com.apstamp45.beryl.game.components.SpriteRenderer;
-import com.apstamp45.gravity_particles.Main;
 import com.apstamp45.gravity_particles.MainScene;
+
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 
@@ -120,6 +120,13 @@ public class Particle extends GameObject {
         acceleration.y = (float) (dt * forceY / this.mass);
     }
 
+    /**
+     * Updates this Particle's acceleration,
+     * velocity, and position based on
+     * other's position and mass.
+     * @param dt The change in time since last update.
+     * @param other The other Particle to compare.
+     */
     public void updateAVP(float dt, Particle other) {
         updateAcceleration(dt, other);
         updateVelocity(dt);
